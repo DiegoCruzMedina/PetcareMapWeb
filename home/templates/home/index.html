@@ -30,7 +30,7 @@
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="inicio">
         <div class="row py-3 px-lg-5">
             <div class="col-lg-4">
                 <a href="" class="navbar-brand d-none d-lg-block">
@@ -65,19 +65,14 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
-                    <a href="price.html" class="nav-item nav-link">Price</a>
-                    <a href="booking.html" class="nav-item nav-link">Booking</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="single.html" class="dropdown-item">Blog Detail</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="#inicio" class="nav-item nav-link active">Inicio</a>
+                    <a href="#nosotros" class="nav-item nav-link">Nosotros</a>
+                    <a href="#servicios" class="nav-item nav-link">Servicios</a>
+                    <a href="price.html" class="nav-item nav-link">Escogénos</a>
+                    <a href="#equipo" class="nav-item nav-link">Equipo</a>
+                    <a href="#clientes" class="nav-item nav-link">Clientes</a>
+                    <a href="#contacto" class="nav-item nav-link">Contacto</a>
+                    <a href="#descargar" class="nav-item nav-link">App</a>
                 </div>
                 <a href=""><img src="../../static/img/icono.png" style="max-width: 85px;"></a>
             </div>
@@ -94,11 +89,9 @@
                     <img class="w-100" src="../../static/img/carousel-1.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h3 class="text-white mb-3 d-none d-sm-block">Best Pet Services</h3>
-                            <h1 class="display-3 text-white mb-3">Keep Your Pet Happy</h1>
-                            <h5 class="text-white mb-3 d-none d-sm-block">Duo nonumy et dolor tempor no et. Diam sit diam sit diam erat</h5>
-                            <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</a>
-                            <a href="" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
+                            <h3 class="text-white mb-3 d-none d-sm-block">Los mejores servicios de mascotas</h3>
+                            <h1 class="display-3 text-white mb-3">Haz feliz a tu mascota</h1>
+                            <h5 class="text-white mb-3 d-none d-sm-block">Cuidar, adoptar y mantener en solo una aplicación.</h5>
                         </div>
                     </div>
                 </div>
@@ -106,11 +99,9 @@
                     <img class="w-100" src="../../static/img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h3 class="text-white mb-3 d-none d-sm-block">Best Pet Services</h3>
-                            <h1 class="display-3 text-white mb-3">Pet Spa & Grooming</h1>
-                            <h5 class="text-white mb-3 d-none d-sm-block">Duo nonumy et dolor tempor no et. Diam sit diam sit diam erat</h5>
-                            <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</a>
-                            <a href="" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
+                            <h3 class="text-white mb-3 d-none d-sm-block">Los mejores servicios de mascotas</h3>
+                            <h1 class="display-3 text-white mb-3">Haz feliz a tu mascota</h1>
+                            <h5 class="text-white mb-3 d-none d-sm-block">Buscar animales en adopción nunca fue tan fácil</h5>
                         </div>
                     </div>
                 </div>
@@ -138,74 +129,74 @@
                     <div class="bg-primary py-5 px-4 px-sm-5">
                         <form class="py-5">
                             <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                <input type="text" class="form-control border-0 p-4" placeholder="Tu Nombre" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                <input type="email" class="form-control border-0 p-4" placeholder="Tu correo" required="required" />
                             </div>
                             <div class="form-group">
                                 <div class="date" id="date" data-target-input="nearest">
-                                    <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Date" data-target="#date" data-toggle="datetimepicker"/>
+                                    <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Fecha de reservación" data-target="#date" data-toggle="datetimepicker"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="time" id="time" data-target-input="nearest">
-                                    <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Time" data-target="#time" data-toggle="datetimepicker"/>
+                                    <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Hora de reservación" data-target="#time" data-toggle="datetimepicker"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <select class="custom-select border-0 px-4" style="height: 47px;">
-                                    <option selected>Select A Service</option>
-                                    <option value="1">Service 1</option>
-                                    <option value="2">Service 1</option>
-                                    <option value="3">Service 1</option>
+                                    <option selected>Selecciona un servicio</option>
+                                    <option value="1">Veterinaria</option>
+                                    <option value="2">Estilista</option>
+                                    <option value="3">Entrenamiento</option>
                                 </select>
                             </div>
                             <div>
-                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Book Now</button>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Agendar</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
-                    <h4 class="text-secondary mb-3">Going for a vacation?</h4>
-                    <h1 class="display-4 mb-4">Book For <span class="text-primary">Your Pet</span></h1>
-                    <p>Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore takima ipsum lorem rebum</p>
+                    <h4 class="text-secondary mb-3">¿Quieres adoptar una mascota?</h4>
+                    <h1 class="display-4 mb-4">Contactate <span class="text-primary">encuentra a tu compañero de vida</span></h1>
+                    <p>No solo te mostraremos información de animales en adopción a través de una aplicación móvil, además te brindaremos veterinarias, centros de rescates y mucho más para facilitarte cualquier labor con tu futura mascota.</p>
                     <div class="row py-2">
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
                                     <h1 class="flaticon-house font-weight-normal text-secondary m-0 mr-3"></h1>
-                                    <h5 class="text-truncate m-0">Pet Boarding</h5>
+                                    <h5 class="text-truncate m-0">Adopción</h5>
                                 </div>
-                                <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                <p>Te brindaremos información de todo tipo de mascotas en adopción.</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
                                     <h1 class="flaticon-food font-weight-normal text-secondary m-0 mr-3"></h1>
-                                    <h5 class="text-truncate m-0">Pet Feeding</h5>
+                                    <h5 class="text-truncate m-0">Alimentos</h5>
                                 </div>
-                                <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                <p>Tiendas que vendan alimentos hasta para tu mascotas exóticas.</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
                                     <h1 class="flaticon-grooming font-weight-normal text-secondary m-0 mr-3"></h1>
-                                    <h5 class="text-truncate m-0">Pet Grooming</h5>
+                                    <h5 class="text-truncate m-0">Estilistas</h5>
                                 </div>
-                                <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                <p class="m-0">Lugares donde atiendan a tu mascota, la bañen, la cepillen y salga siendo Brad Pitt.</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
                                     <h1 class="flaticon-toy font-weight-normal text-secondary m-0 mr-3"></h1>
-                                    <h5 class="text-truncate m-0">Pet Tranning</h5>
+                                    <h5 class="text-truncate m-0">Entrenamientos</h5>
                                 </div>
-                                <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                <p class="m-0">Ubicaciones de centros donde te ayuden a entrenar a tu mascota, o que alguien más lo haga por ti.</p>
                             </div>
                         </div>
                     </div>
@@ -217,19 +208,18 @@
 
 
     <!-- About Start -->
-    <div class="container py-5">
+    <div class="container py-5" id="nosotros">
         <div class="row py-5">
             <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
-                <h4 class="text-secondary mb-3">About Us</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Boarding</span> & <span class="text-secondary">Daycare</span></h1>
-                <h5 class="text-muted mb-3">Amet stet amet ut. Sit no vero vero no dolor. Sed erat ut sea. Just clita ut stet kasd at diam sit erat vero sit.</h5>
-                <p class="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
+                <h4 class="text-secondary mb-3">Sobre Nosotros</h4>
+                <h1 class="display-4 mb-4"><span class="text-primary">Pet</span> & <span class="text-secondary">CareMap</span></h1>
+                <h5 class="text-muted mb-3">Todo este proyecto nace a raíz de un propósito social enfocado a nuestros peludos. </h5>
+                <p class="mb-4">Buscar disminuir el índice de animales callejeros fomentando la adopción y ayudar a las personas en su día a día con sus mascotas, facilitándoles acceso a ubicaciones que les será de ayuda. Es un sueño hecho realidad para nosotros que con la aplicación podamos brindar 3 cosas:</p>
                 <ul class="list-inline">
-                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Best In Industry</h5></li>
-                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Emergency Services</h5></li>
-                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>24/7 Customer Support</h5></li>
+                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Fomentar adopciones</h5></li>
+                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Servicios de emergencia</h5></li>
+                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Soporte 24/7</h5></li>
                 </ul>
-                <a href="" class="btn btn-lg btn-primary mt-3 px-4">Learn More</a>
             </div>
             <div class="col-lg-5">
                 <div class="row px-3">
@@ -250,59 +240,54 @@
 
 
     <!-- Services Start -->
-    <div class="container-fluid bg-light pt-5">
+    <div class="container-fluid bg-light pt-5" id="servicios">
         <div class="container py-5">
             <div class="d-flex flex-column text-center mb-5">
-                <h4 class="text-secondary mb-3">Our Services</h4>
-                <h1 class="display-4 m-0"><span class="text-primary">Premium</span> Pet Services</h1>
+                <h4 class="text-secondary mb-3">Servicios de la APP</h4>
+                <h1 class="display-4 m-0"><span class="text-primary">App</span> Servicios</h1>
             </div>
             <div class="row pb-3">
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-house display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Boarding</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
-                        <a class="text-uppercase font-weight-bold" href="">Read More</a>
+                        <h3 class="mb-3">Foro de adopción</h3>
+                        <p>Podrás publicar información de algún animal que este en adopción. Ayudarás a encontrarle un hogar a todos nuestros peludos.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-food display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Feeding</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
-                        <a class="text-uppercase font-weight-bold" href="">Read More</a>
+                        <h3 class="mb-3">Tiendad de comida</h3>
+                        <p>La aplicacion te brindara la información de la tienda de comida más cercana a tu ubicación.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-grooming display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Grooming</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
-                        <a class="text-uppercase font-weight-bold" href="">Read More</a>
+                        <h3 class="mb-3">Estilistas</h3>
+                        <p>La aplicacion te brindara la información de los estilistas más cercanos a tu ubicación
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-cat display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Per Training</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
-                        <a class="text-uppercase font-weight-bold" href="">Read More</a>
+                        <h3 class="mb-3">Entrenamiento</h3>
+                        <p>La aplicacion te brindara la información de ubicaciones para entrenar a tu mascota.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-dog display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Exercise</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
-                        <a class="text-uppercase font-weight-bold" href="">Read More</a>
+                        <h3 class="mb-3">información sobre animales</h3>
+                        <p>La app te brindará información aleatoria de animales, culturizando a las personas un poco más.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-vaccine display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Treatment</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
-                        <a class="text-uppercase font-weight-bold" href="">Read More</a>
+                        <h3 class="mb-3">Centros Médicos</h3>
+                        <p>Obviamente como parte principal de la app, sera mostrarte centros de rescate o veterinarias cerca tuyo.</p>
                     </div>
                 </div>
             </div>
@@ -318,32 +303,32 @@
                 <img class="img-fluid w-100" src="img/feature.jpg" alt="">
             </div>
             <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
-                <h4 class="text-secondary mb-3">Why Choose Us?</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Special Care</span> On Pets</h1>
-                <p class="mb-4">Dolor lorem lorem ipsum sit et ipsum. Sadip sea amet diam sed ut vero no sit. Et elitr stet sed sit sed kasd. Erat duo eos et erat sed diam duo</p>
+                <h4 class="text-secondary mb-3">¿Por qué escogernos?</h4>
+                <h1 class="display-4 mb-4"><span class="text-primary">Especial Cuidado</span> En Animales</h1>
+                <p class="mb-4">No solo abarcamos el área de animales callejeros, si no, toda el área del mundo animal, incluyendo mascotas.</p>
                 <div class="row py-2">
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-4">
                             <h1 class="flaticon-cat font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Best In Industry</h5>
+                            <h5 class="text-truncate m-0">Adopción</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-4">
                             <h1 class="flaticon-doctor font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Emergency Services</h5>
+                            <h5 class="text-truncate m-0">Servicios de Salud</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center">
                             <h1 class="flaticon-care font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Special Care</h5>
+                            <h5 class="text-truncate m-0">Cuidados especiales</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center">
                             <h1 class="flaticon-dog font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Customer Support</h5>
+                            <h5 class="text-truncate m-0">Soporte especializado</h5>
                         </div>
                     </div>
                 </div>
@@ -440,10 +425,10 @@
 
 
     <!-- Team Start -->
-    <div class="container mt-5 pt-5 pb-3">
+    <div class="container mt-5 pt-5 pb-3" id="equipo">
         <div class="d-flex flex-column text-center mb-5">
-            <h4 class="text-secondary mb-3">Team Member</h4>
-            <h1 class="display-4 m-0">Meet Our <span class="text-primary">Team Member</span></h1>
+            <h4 class="text-secondary mb-3">Equipo de Trabajo</h4>
+            <h1 class="display-4 m-0">Conoce Nuestro <span class="text-primary">Equipo De Trabajo</span></h1>
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -451,8 +436,8 @@
                     <img class="card-img-top" src="img/team-1.jpg" alt="">
                     <div class="card-body text-center p-0">
                         <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Mollie Ross</h5>
-                            <i>Founder & CEO</i>
+                            <h5>Diego Cruz</h5>
+                            <i>Fundador & CEO</i>
                         </div>
                         <div class="team-social d-flex align-items-center justify-content-center bg-dark">
                             <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -468,8 +453,8 @@
                     <img class="card-img-top" src="img/team-2.jpg" alt="">
                     <div class="card-body text-center p-0">
                         <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Jennifer Page</h5>
-                            <i>Chef Executive</i>
+                            <h5>Jhonny Silva</h5>
+                            <i>Fundador & CEO</i>
                         </div>
                         <div class="team-social d-flex align-items-center justify-content-center bg-dark">
                             <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -485,8 +470,8 @@
                     <img class="card-img-top" src="img/team-3.jpg" alt="">
                     <div class="card-body text-center p-0">
                         <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Kate Glover</h5>
-                            <i>Doctor</i>
+                            <h5>Catalina Verdugo</h5>
+                            <i>Veterinaria Fisioterapeuta</i>
                         </div>
                         <div class="team-social d-flex align-items-center justify-content-center bg-dark">
                             <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -502,8 +487,8 @@
                     <img class="card-img-top" src="img/team-4.jpg" alt="">
                     <div class="card-body text-center p-0">
                         <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Lilly Fry</h5>
-                            <i>Trainer</i>
+                            <h5>Gonzalo Quinteros</h5>
+                            <i>Entrenador</i>
                         </div>
                         <div class="team-social d-flex align-items-center justify-content-center bg-dark">
                             <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -520,52 +505,52 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid bg-light my-5 p-0 py-5">
+    <div class="container-fluid bg-light my-5 p-0 py-5" id="clientes">
         <div class="container p-0 py-5">
             <div class="d-flex flex-column text-center mb-5">
-                <h4 class="text-secondary mb-3">Testimonial</h4>
-                <h1 class="display-4 m-0">Our Client <span class="text-primary">Says</span></h1>
+                <h4 class="text-secondary mb-3">Testimonios</h4>
+                <h1 class="display-4 m-0">Nuestros<span class="text-primary"> Clientes</span></h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="bg-white mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
+                        <img class="img-fluid" src="../../static/img/clientes 2.jpg" style="width: 100px; height: 100px;" alt="">
                         <div class="ml-3">
-                            <h5>Client Name</h5>
+                            <h5>Diego Cruz</h5>
                             <i>Profession</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">"Encuentro que es una de las ideas mas innovadoras que he visto en mucho tiempo, es increible ver como todo funciona a tiempo real, y que tenga acceso a tanta información sobre lugares que me ayuden a cuidar a Golfo (mi perrito)".</p>
                 </div>
                 <div class="bg-white mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
+                        <img class="img-fluid" src="../../static/img/clientes 1.jpg" style="width: 100px; height: 100px;" alt="">
                         <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
+                            <h5>Alexis Sánchez</h5>
+                            <i>Futbolista Profesional</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">"La verdad es que la aplicación me ha servido de harta ayuda, más que todo con los controles de mis perros incluso fuera del país, es díficil encontrar veterinarias de buena calidad".</p>
                 </div>
                 <div class="bg-white mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
+                        <img class="img-fluid" src="../../static/img/clientes 3.jpg" style="width: 100px; height: 100px;" alt="">
                         <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
+                            <h5>Claudio Torres</h5>
+                            <i>Arquitecto</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">"Me sorprende que una aplicación así facilite la vida no solo a nosotros los dueños, si no, a nuestras mascotas también y mucho más a los animales callejeros".</p>
                 </div>
                 <div class="bg-white mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
-                        <img class="img-fluid" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
+                        <img class="img-fluid" src="../../static/img/clientes 4.jpg" style="width: 100px; height: 100px;" alt="">
                         <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
+                            <h5>Franchesca Amamé</h5>
+                            <i>Profesora</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">"Me encanta como una aplicación puede aportar tanto a la sociedad, incluso sirve como aprendizaje para mis alumnos, fomentandoles la adopción y el cuidado a los animales. Me encantó".</p>
                 </div>
             </div>
         </div>
@@ -627,11 +612,34 @@
             </div>
         </div>
     </div>
-    <!-- Blog End -->
 
+<!---------descarga la app -->
+    <div class="container-fluid bg-light my-5 p-0 py-5" id="descargar">
+        <div class="container p-0 py-5">
+            <div class="d-flex flex-column text-center mb-5">
+                <h4 class="text-secondary mb-3">Aplicación</h4>
+                <h1 class="display-4 m-0">Accede a nuestra aplicación <span class="text-primary">Ahora</span></h1>
+            </div>
+            {% if is_mobile %}
+                <!-- Si es móvil, mostramos un enlace -->
+                 <div class="d-flex flex-column text-center mb-5">
+                <p>Haz clic en el siguiente enlace para descargar la APK:</p>
+                <div class="qr-container">
+                <a href="{{ apk_url }}" class="btn" download>Descargar APK</a>
+                </div></div>
+            {% else %}
+                <div class="d-flex flex-column text-center mb-5">
+                <!-- Si es escritorio, mostramos un qr -->
+                <p>Escanea el QR para descargar la APK:</p>
+                <div style="display: flex; justify-content: center;">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ apk_url }}&size=100x100" alt="QR Code" height="150px" width="150px"></div></div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5" id="contacto">
         <div class="row pt-5">
             <div class="col-lg-4 col-md-12 mb-5">
                 <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>Lover</h1>
