@@ -68,11 +68,10 @@
                     <a href="#inicio" class="nav-item nav-link active">Inicio</a>
                     <a href="#nosotros" class="nav-item nav-link">Nosotros</a>
                     <a href="#servicios" class="nav-item nav-link">Servicios</a>
-                    <a href="price.html" class="nav-item nav-link">Escogénos</a>
-                    <a href="#equipo" class="nav-item nav-link">Equipo</a>
+                    <a href="#escoge" class="nav-item nav-link">Escogénos</a>
+                    <a href="#funciones" class="nav-item nav-link">Funciones</a>
                     <a href="#clientes" class="nav-item nav-link">Clientes</a>
-                    <a href="#contacto" class="nav-item nav-link">Contacto</a>
-                    <a href="#descargar" class="nav-item nav-link">App</a>
+                    <a href="#descargar" class="nav-item nav-link">Aplicacion</a>
                 </div>
                 <a href=""><img src="../../static/img/icono.png" style="max-width: 85px;"></a>
             </div>
@@ -122,45 +121,36 @@
 
 
     <!-- Booking Start -->
-    <div class="container-fluid bg-light">
+    <div class="container-fluid bg-light" style="margin-bottom: 100px;" id="inicio">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="bg-primary py-5 px-4 px-sm-5">
-                        <form class="py-5">
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Tu Nombre" required="required" />
+                        <div class="container p-0 py-5">
+                            <div class="d-flex flex-column text-center mb-5">
+                                <h1 class="display-4 m-0">Accede a nuestra aplicación <span style="color: aliceblue;">Ahora</span></h1>
                             </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Tu correo" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <div class="date" id="date" data-target-input="nearest">
-                                    <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Fecha de reservación" data-target="#date" data-toggle="datetimepicker"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="time" id="time" data-target-input="nearest">
-                                    <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Hora de reservación" data-target="#time" data-toggle="datetimepicker"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
-                                    <option selected>Selecciona un servicio</option>
-                                    <option value="1">Veterinaria</option>
-                                    <option value="2">Estilista</option>
-                                    <option value="3">Entrenamiento</option>
-                                </select>
-                            </div>
-                            <div>
-                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Agendar</button>
-                            </div>
-                        </form>
+                            {% if is_mobile %}
+                                <!-- Si es móvil, mostramos un enlace -->
+                                 <div class="d-flex flex-column text-center mb-5">
+                                <p>Haz clic en el siguiente enlace para descargar la APK:</p>
+                                <div class="qr-container">
+                                <a href="{{ apk_url }}" class="btn btn-primary">Descargar APK</a>
+                                
+                                </div></div>
+                            {% else %}
+                                <div class="d-flex flex-column text-center mb-5">
+                                <!-- Si es escritorio, mostramos un qr -->
+                                <p>Escanea el QR para descargar la APK:</p>
+                                <div style="display: flex; justify-content: center;">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ apk_url }}&size=100x100" alt="QR Code" height="150px" width="150px"></div></div>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
                     <h4 class="text-secondary mb-3">¿Quieres adoptar una mascota?</h4>
-                    <h1 class="display-4 mb-4">Contactate <span class="text-primary">encuentra a tu compañero de vida</span></h1>
+                    <h1 class="display-4 mb-4">Descarga y <span class="text-primary">encuentra a tu compañero de vida</span></h1>
                     <p>No solo te mostraremos información de animales en adopción a través de una aplicación móvil, además te brindaremos veterinarias, centros de rescates y mucho más para facilitarte cualquier labor con tu futura mascota.</p>
                     <div class="row py-2">
                         <div class="col-sm-6">
@@ -224,13 +214,13 @@
             <div class="col-lg-5">
                 <div class="row px-3">
                     <div class="col-12 p-0">
-                        <img class="img-fluid w-100" src="img/about-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="../../static/img/about-1.jpg" alt="">
                     </div>
                     <div class="col-6 p-0">
-                        <img class="img-fluid w-100" src="img/about-2.jpg" alt="">
+                        <img class="img-fluid w-100" src="../../static/img/about-2.jpg" alt="">
                     </div>
                     <div class="col-6 p-0">
-                        <img class="img-fluid w-100" src="img/about-3.jpg" alt="">
+                        <img class="img-fluid w-100" src="../../static/img/about-3.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -257,7 +247,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
                         <h3 class="flaticon-food display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Tiendad de comida</h3>
+                        <h3 class="mb-3">Tiendas de comida</h3>
                         <p>La aplicacion te brindara la información de la tienda de comida más cercana a tu ubicación.</p>
                     </div>
                 </div>
@@ -297,10 +287,10 @@
 
 
     <!-- Features Start -->
-    <div class="container">
+    <div class="container" id="escoge">
         <div class="row align-items-center">
             <div class="col-lg-5">
-                <img class="img-fluid w-100" src="img/feature.jpg" alt="">
+                <img class="img-fluid w-65" src="../../static/img/app3.png" alt="">
             </div>
             <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
                 <h4 class="text-secondary mb-3">¿Por qué escogernos?</h4>
@@ -337,92 +327,67 @@
     </div>
     <!-- Features End -->
 
-
-    <!-- Pricing Plan Start -->
-    <div class="container-fluid bg-light pt-5 pb-4">
-        <div class="container py-5">
-            <div class="d-flex flex-column text-center mb-5">
-                <h4 class="text-secondary mb-3">Pricing Plan</h4>
-                <h1 class="display-4 m-0">Choose the <span class="text-primary">Best Price</span></h1>
+    <!-- Blog Start -->
+    <div class="container pt-5" id="funciones">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-secondary mb-3">Funciones</h4>
+            <h1 class="display-4 m-0"><span class="text-primary">PetCareMap</span> Usos y funciones</h1>
+        </div>
+        <div class="row pb-3">
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 mb-2">
+                    <div style="display: flex; justify-content: center;">
+                    <img class="card-img-top" src="../../static/img/app2.png" alt="">
+                    </div>
+                    <div class="card-body bg-light p-4">
+                        <h4 class="card-title text-truncate">Informacion de ubicaciones</h4>
+                        <div class="d-flex mb-3">
+                            <small class="mr-2"><i class="fa fa-user text-muted"></i> Usuario</small>
+                            <small class="mr-2"><i class="fa fa-folder text-muted"></i> Aplicacion</small>
+                            <small class="mr-2"><i class="fa fa-comments text-muted"></i> Informacion de lugar</small>
+                        </div>
+                        <p>Podras saber mediante un mapa toda la informacion legitima y necesaria de los lugares mas cercanos relacionado al mundo animal, sabiendo a que se dedican y mucho mas.</p>
+                        <a class="font-weight-bold" href="#descargar">Ir a descargar</a>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img class="card-img-top" src="img/price-1.jpg" alt="">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-primary mb-3">Basic</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
-                                </h1>
-                            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 mb-2">
+                    <div style="display: flex; justify-content: center;">
+                    <img class="card-img-top" src="../../static/img/app1.png" alt="">
+                    </div>
+                    <div class="card-body bg-light p-4">
+                        <h4 class="card-title text-truncate">Funciones de perfil</h4>
+                        <div class="d-flex mb-3">
+                            <small class="mr-2"><i class="fa fa-user text-muted"></i> Usuario</small>
+                            <small class="mr-2"><i class="fa fa-folder text-muted"></i> aplicacion</small>
+                            <small class="mr-2"><i class="fa fa-comments text-muted"></i> Mis publicaciones</small>
                         </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Veterinary Medicine</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Signup Now</a>
-                        </div>
+                        <p>Tienes todas las funciones de cualquier red social sin contar mensajeria en la misma app, pero con un sistema completo de manejo de tus publicaciones y publicaciones guardadas.</p>
+                        <a class="font-weight-bold" href="#descargar">Ir a descargar</a>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img class="card-img-top" src="img/price-2.jpg" alt="">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-secondary mb-3">Standard</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Veterinary Medicine</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-secondary btn-block p-3" style="border-radius: 0;">Signup Now</a>
-                        </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 mb-2">
+                    <div style="display: flex; justify-content: center;">
+                    <img class="card-img-top" src="../../static/img/app5.png" alt="">
                     </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img class="card-img-top" src="img/price-3.jpg" alt="">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-primary mb-3">Premium</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
-                                </h1>
-                            </div>
+                    <div class="card-body bg-light p-4">
+                        <h4 class="card-title text-truncate">Foro de adopcion</h4>
+                        <div class="d-flex mb-3">
+                            <small class="mr-2"><i class="fa fa-user text-muted"></i> Usuario</small>
+                            <small class="mr-2"><i class="fa fa-folder text-muted"></i> Aplicacion</small>
+                            <small class="mr-2"><i class="fa fa-comments text-muted"></i> Foro de adopcion</small>
                         </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Veterinary Medicine</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Signup Now</a>
-                        </div>
+                        <p>La appuenta con un foro de adopcion donde podras publicar animales en adopcion y de tambien forma poder adoptar animales o poder guardar adopciones en caso de que lo necesites.</p>
+                        <a class="font-weight-bold" href="#descargar">Ir a descargar</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Pricing Plan End -->
-
+   
 
     <!-- Team Start -->
     <div class="container mt-5 pt-5 pb-3" id="equipo">
@@ -558,61 +523,6 @@
     <!-- Testimonial End -->
 
 
-    <!-- Blog Start -->
-    <div class="container pt-5">
-        <div class="d-flex flex-column text-center mb-5">
-            <h4 class="text-secondary mb-3">Pet Blog</h4>
-            <h1 class="display-4 m-0"><span class="text-primary">Updates</span> From Blog</h1>
-        </div>
-        <div class="row pb-3">
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0 mb-2">
-                    <img class="card-img-top" src="img/blog-1.jpg" alt="">
-                    <div class="card-body bg-light p-4">
-                        <h4 class="card-title text-truncate">Diam amet eos at no eos</h4>
-                        <div class="d-flex mb-3">
-                            <small class="mr-2"><i class="fa fa-user text-muted"></i> Admin</small>
-                            <small class="mr-2"><i class="fa fa-folder text-muted"></i> Web Design</small>
-                            <small class="mr-2"><i class="fa fa-comments text-muted"></i> 15</small>
-                        </div>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit vero stet justo</p>
-                        <a class="font-weight-bold" href="">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0 mb-2">
-                    <img class="card-img-top" src="img/blog-2.jpg" alt="">
-                    <div class="card-body bg-light p-4">
-                        <h4 class="card-title text-truncate">Diam amet eos at no eos</h4>
-                        <div class="d-flex mb-3">
-                            <small class="mr-2"><i class="fa fa-user text-muted"></i> Admin</small>
-                            <small class="mr-2"><i class="fa fa-folder text-muted"></i> Web Design</small>
-                            <small class="mr-2"><i class="fa fa-comments text-muted"></i> 15</small>
-                        </div>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit vero stet justo</p>
-                        <a class="font-weight-bold" href="">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card border-0 mb-2">
-                    <img class="card-img-top" src="img/blog-3.jpg" alt="">
-                    <div class="card-body bg-light p-4">
-                        <h4 class="card-title text-truncate">Diam amet eos at no eos</h4>
-                        <div class="d-flex mb-3">
-                            <small class="mr-2"><i class="fa fa-user text-muted"></i> Admin</small>
-                            <small class="mr-2"><i class="fa fa-folder text-muted"></i> Web Design</small>
-                            <small class="mr-2"><i class="fa fa-comments text-muted"></i> 15</small>
-                        </div>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit vero stet justo</p>
-                        <a class="font-weight-bold" href="">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 <!---------descarga la app -->
     <div class="container-fluid bg-light my-5 p-0 py-5" id="descargar">
         <div class="container p-0 py-5">
@@ -625,7 +535,7 @@
                  <div class="d-flex flex-column text-center mb-5">
                 <p>Haz clic en el siguiente enlace para descargar la APK:</p>
                 <div class="qr-container">
-                <a href="{{ apk_url }}" class="btn" download>Descargar APK</a>
+                <a href="{{ apk_url }}" class="btn btn-primary" download>Descargar APK</a>
                 </div></div>
             {% else %}
                 <div class="d-flex flex-column text-center mb-5">
@@ -634,39 +544,34 @@
                 <div style="display: flex; justify-content: center;">
                 <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ apk_url }}&size=100x100" alt="QR Code" height="150px" width="150px"></div></div>
             {% endif %}
-            </div>
         </div>
     </div>
+    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5" id="contacto">
         <div class="row pt-5">
             <div class="col-lg-4 col-md-12 mb-5">
-                <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>Lover</h1>
-                <p class="m-0">Ipsum amet sed vero et lorem stet eos ut, labore sed sed stet sea est ipsum ut. Volup amet ea sanct ipsum, dolore vero lorem no duo eirmod. Eirmod amet ipsum no ipsum lorem clita ut. Ut sed sit lorem ea lorem sed, amet stet sit sea ea diam tempor kasd kasd. Diam nonumy etsit tempor ut sed diam sed et ea</p>
+                <h1 class="mb-3 display-5 text-capitalize text-white"><span style="color: rgb(211, 247, 235);">Pet</span>careMap</h1>
+                <p class="m-0">Nuestro principal proposito es disminuir el indice de mascotas callejeras, hacer conciencia en la gente de lo importante de una vida como tambien fomentar la informacion necesaria en caso de emergencia o servicio que requiera las personas. Querer hacer el cambio para un mundo mas agradable y mas humano es lo mas importante.</p>
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="row">
                     <div class="col-md-4 mb-5">
                         <h5 class="text-primary mb-4">Get In Touch</h5>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                        <div class="d-flex justify-content-start mt-4">
-                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>David Arellano #191, Independencia Santiago</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>9 3453 6789</p>
+                        <p><i class="fa fa-envelope mr-2"></i>petcaremapets@gmail.com</p>
                     </div>
                     <div class="col-md-4 mb-5">
                         <h5 class="text-primary mb-4">Popular Links</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Team</a>
-                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            <a class="text-white mb-2" href="#inicio"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-white mb-2" href="#nosotros"><i class="fa fa-angle-right mr-2"></i>Nosotros</a>
+                            <a class="text-white mb-2" href="#servicios"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                            <a class="text-white mb-2" href="#escoge"><i class="fa fa-angle-right mr-2"></i>Escogenos</a>
+                            <a class="text-white" href="#funciones"><i class="fa fa-angle-right mr-2"></i>Funciones</a>
+                            <a class="text-white" href="#clientes"><i class="fa fa-angle-right mr-2"></i>Clientes</a>
                         </div>
                     </div>
                     
